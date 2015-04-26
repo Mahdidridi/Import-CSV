@@ -1,0 +1,34 @@
+<template name="home">
+  <div class="template-home">
+
+    <div class="container">
+      <div class="row">
+        <p>
+          <button type="button" class="btn btn-default btn-file">
+            Import CSV <input type="file" name="myFileInput" class="myFileInput" value="">
+          </button>
+        </p>
+        <br>
+        <table class="table table-bordered table-hover table-striped">
+          <thead>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+          </thead>
+          <tbody>
+            {{#each addresses}}
+              {{>address}}
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</template>
+<template name="address">
+  <tr>
+    <td>{{name}}</td>
+    <td>{{email}}</td>
+    <td>{{status}}</td>
+  </tr>
+</template>
